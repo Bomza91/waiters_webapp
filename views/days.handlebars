@@ -1,0 +1,43 @@
+<h1>Bee's Coffee Shop</h1>
+<br>
+
+<ul>
+    <li class="less">more waiters needed</li>
+    <li class="enough">Enough waiters</li>
+    <li class="more">More than enough waiters</li>
+</ul>
+
+<h2>Waiters Available: </h2>
+<br>
+
+<div class="table">
+
+    <table class="table data">
+        <thead>
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">waiters</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each days}}
+            <tr>
+                <td>{{dayname}}</td>
+                <td class="{{colors}}">
+                    {{#each waiters}}
+                    {{this}},
+
+                    {{/each}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+</div>
+<br>
+<br>
+
+<button class="button-primary" type="submit" name="button"><a href="/reset">RESET</a></button>
+<button class="button-primary" type="submit" name="button"><a href="/">HOME</a></button>

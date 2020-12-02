@@ -1,0 +1,60 @@
+
+<div class="container">
+
+<h1>Bee's Coffee Shop</h1>
+  <form action='/waiters/{{this.name}}' method="POST">
+
+    <br>
+    <div class="days">
+      <strong class="choose">Choose the day(s) you would like to work on, don't choose more than 3 days:</strong>
+      <br> <br>
+
+      <label class="check">Monday
+        <input type="checkbox" name="checkmark" value="Monday">
+        <span class="checkmark"></span>
+      </label>
+      <label class="check">Tuesday
+        <input type="checkbox" name="checkmark" value="Tuesday">
+        <span class="checkmark"></span>
+      </label>
+      <label class="check">Wednesday
+        <input type="checkbox" name="checkmark" value="Wednesday">
+        <span class="checkmark"></span>
+      </label>
+      <label class="check">Thursday
+        <input type="checkbox" name="checkmark" value="Thursday">
+        <span class="checkmark"></span>
+      </label>
+      <label class="check">Friday
+        <input type="checkbox" name="checkmark" value="Friday">
+        <span class="checkmark"></span>
+      </label>
+    
+
+      <br>
+       <br>
+      <div class="flash">
+        {{#if messages.error}}
+        {{messages.error}}
+        {{/if}}
+      </div>
+
+      <div class="success">
+        {{#if messages.info}}
+        {{messages.info}}
+        {{/if}}
+      </div>
+      <br>
+      <button class="button-primary" type="submit" name="button">SUBMIT</button>
+      <button class="button-primary" type="submit" name="button"><a href="/waiters/">HOME</a></button>
+    </div>
+  </form>
+
+</div>
+
+<script>
+  setTimeout(function () {
+    document.querySelector(".flash").innerHTML = "";
+    document.querySelector(".success").innerHTML = ""
+  }, 3000);
+</script>
