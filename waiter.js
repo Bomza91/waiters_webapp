@@ -64,6 +64,10 @@ async function selectedDays(day){
         }
     }
 
+    async function getShifts(){
+
+    }
+
     async function addWaitersShifts(personId, dayId) {
         await pool.query(`insert into shifts (weekdayId, waiterId) values($1,$2)`, [dayId, personId])
     }
@@ -111,6 +115,7 @@ async function selectedDays(day){
         checkingWaiters,
         deleteUser,
         addShifts,
+        getShifts,
         checkDays,
         getDay,
         reset,
